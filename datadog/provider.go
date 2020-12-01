@@ -83,14 +83,13 @@ func Provider() terraform.ResourceProvider {
 		},
 
 		DataSourcesMap: map[string]*schema.Resource{
-			"datadog_dashboard":                 dataSourceDatadogDashboard(),
-			"datadog_dashboard_list":            dataSourceDatadogDashboardList(),
-			"datadog_ip_ranges":                 dataSourceDatadogIpRanges(),
-			"datadog_monitor":                   dataSourceDatadogMonitor(),
-			"datadog_permissions":               dataSourceDatadogPermissions(),
-			"datadog_role":                      dataSourceDatadogRole(),
-			"datadog_security_monitoring_rules": dataSourceDatadogSecurityMonitoringRules(),
-			"datadog_synthetics_locations":      dataSourceDatadogSyntheticsLocations(),
+			"datadog_dashboard":            dataSourceDatadogDashboard(),
+			"datadog_dashboard_list":       dataSourceDatadogDashboardList(),
+			"datadog_ip_ranges":            dataSourceDatadogIpRanges(),
+			"datadog_monitor":              dataSourceDatadogMonitor(),
+			"datadog_permissions":          dataSourceDatadogPermissions(),
+			"datadog_role":                 dataSourceDatadogRole(),
+			"datadog_synthetics_locations": dataSourceDatadogSyntheticsLocations(),
 		},
 
 		ConfigureFunc: providerConfigure,
